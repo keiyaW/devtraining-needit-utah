@@ -15,7 +15,8 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition/>
+        <filter_condition table="x_58872_needit_needit">null<item endquery="false" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
         <is_rest>false</is_rest>
         <message/>
         <name>NeedIt When needed field date</name>
@@ -34,6 +35,12 @@
 
 	var whenNeeded = new GlideDateTime(current.u_when_needed);
 
+	gs.addInfoMessage("rn");
+	gs.addInfoMessage(rightNow);
+
+	gs.addInfoMessage("when");
+	gs.addInfoMessage(whenNeeded);
+
 	if (whenNeeded.before(rightNow)) {
 		gs.addErrorMessage("When needed date cannot be in the past.  Your request has not been saved to the database.");
 		current.setAbortAction(true);
@@ -46,7 +53,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6d149eec83001210a6ad6f60ceaad3e5</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>NeedIt When needed field date</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -54,7 +61,7 @@
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_6d149eec83001210a6ad6f60ceaad3e5</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-08-13 00:59:14</sys_updated_on>
+        <sys_updated_on>2024-08-13 04:56:47</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
